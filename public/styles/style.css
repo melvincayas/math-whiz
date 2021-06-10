@@ -1,152 +1,157 @@
 body {
-    font-family: 'Rubik', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	font-family: "Rubik", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#eef2f3,
+		#8e9eab
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#eef2f3,
+		#8e9eab
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100%;
 }
 
 #title {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-    font-size: 3.5em;
-    color: black;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	font-size: 3.5em;
+	color: black;
 }
 
 #mainContainer {
-    border: 1px solid #333333;
-    box-shadow: 2px 2px black;
-    width: 500px;
-    height: 300px;
-    text-align: center;
+	border: 1px solid #333333;
+	box-shadow: 2px 2px black;
+	width: 500px;
+	height: 300px;
+	text-align: center;
 }
 
 #gameContent {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .allContainers {
-    background-color: rgb(146, 170, 192);
+	background-color: rgb(146, 170, 192);
 }
 
 #statsContainer {
-    margin-top: 2em;
-    width: 300px;
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: 0.1s linear;
-    overflow: hidden;
-    text-align: center;
-    /* font-size: 1.25em; */
+	margin-top: 2em;
+	width: 300px;
+	height: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: 0.1s linear;
+	overflow: hidden;
+	text-align: center;
 }
 
 .statsText {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 #equation {
-    padding: 0;
-    margin: 0;
-    font-size: 3.5em;
+	padding: 0;
+	margin: 0;
+	font-size: 3.5em;
 }
 
 #ansContainer {
-    margin-top: 2em;
-    width: 350px;
-    height: 0px;
-    display: flex;
-    transition: 0.1s linear;
-    overflow: hidden;
-    overflow-y: auto;
+	margin-top: 2em;
+	width: 350px;
+	height: 0px;
+	display: flex;
+	transition: 0.1s linear;
+	overflow: hidden;
+	overflow-y: auto;
 }
 
 #rightContainer {
-    border-right: 1px solid black;
+	border-right: 1px solid black;
 }
 
 #buttonSection {
-    display: flex;
-    justify-content: space-evenly;
-    width: 90%;
+	display: flex;
+	justify-content: space-evenly;
+	width: 90%;
 }
 
 #equation {
-    font-size: 5em;
+	font-size: 5em;
 }
 
 .allButtons {
-    background-color: coral;
-    width: 50%;
-    height: 1.5em;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    border: 1px solid #333333;
-    box-shadow: 1px 1px black;
+	background-color: coral;
+	width: 50%;
+	height: 1.5em;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	border: 1px solid #333333;
+	box-shadow: 1px 1px black;
 }
 
 .allButtons:hover {
-    background-color: rgb(248, 88, 29);
+	background-color: rgb(248, 88, 29);
 }
 
 .allButtons:focus {
-    outline: none;
+	outline: none;
 }
 
 .selection {
-    font-size: 1.25em;
+	font-size: 1.25em;
 }
 
 .ansList {
-    margin: 0;
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    overflow-y: auto;
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	overflow-y: auto;
 }
 
 .headliner {
-    background-color: coral;
-    border-bottom: 1px solid #333333;
-    padding: 0;
-    margin: 0;
-
+	background-color: coral;
+	border-bottom: 1px solid #333333;
+	padding: 0;
+	margin: 0;
 }
 
 .listStyle {
-    margin: 2px;
-    font-size: 1.75em;
+	margin: 2px;
+	font-size: 1.75em;
 }
 
 .hidden {
-    display: none !important;
+	display: none !important;
 }
 
 h3 {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5em;
+	padding: 0;
+	margin: 0;
+	font-size: 1.5em;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }

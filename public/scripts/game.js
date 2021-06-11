@@ -9,7 +9,6 @@ const answer = document.querySelector("#answer");
 const num1 = document.querySelector("#num1");
 const num2 = document.querySelector("#num2");
 const sign = document.querySelector("#sign");
-const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
 const rightText = document.querySelector("#rightText");
 const totalText = document.querySelector("#totalText");
 const percentageText = document.querySelector("#percentageText");

@@ -29,3 +29,9 @@
 .all-buttons:active {
 	transform: scale(0.99);
 }
+
+@media all and (max-width: 575px) {
+	.all-buttons {
+		font-size: 1em;
+	}
+}

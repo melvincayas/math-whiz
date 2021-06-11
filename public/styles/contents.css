@@ -68,3 +68,22 @@
 .selection {
 	font-size: 1.25em;
 }
+
+@media all and (max-width: 575px) {
+	#game-settings {
+		font-size: 0.85em;
+	}
+
+	#equation {
+		font-size: 4.5em;
+	}
+
+	.stats-text,
+	.subtitle {
+		font-size: 1.75em;
+	}
+
+	.list-style {
+		font-size: 1.5em;
+	}
+}

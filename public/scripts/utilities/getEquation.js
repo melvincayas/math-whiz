@@ -18,9 +18,9 @@ const difficultySetting = () => {
 const filterCheckBox = () => {
 	const checkedOperators = [];
 
-	for (let checkbox of checkBoxes) {
-		if (checkbox.checked) {
-			checkedOperators.push(checkbox.value);
+	for (let checkBox of checkBoxes) {
+		if (checkBox.checked) {
+			checkedOperators.push(checkBox.value);
 		}
 	}
 

@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,300&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="/styles/buttons.css">
+    <link rel="stylesheet" href="/styles/containers.css">
+    <link rel="stylesheet" href="/styles/contents.css">
 </head>
 
 <body>
@@ -45,18 +48,16 @@
                 <label for="minute" class="selection">60 Second Fury</label>
             </div>
             <div>
-                <button id="startBtn" class="allButtons">Start Game</button>
+                <button class="allButtons">Start Game</button>
             </div>
         </form>
         <div id="gameContent" class="hidden">
             <div>
                 <h1 id="equation"><span id="num1">X</span> <span id="sign">+</span> <span id="num2">Y</span></h1>
             </div>
-            <div id="answerDiv">
-                <form id="answer">
-                    <input type="number" name="number">
-                </form>
-            </div>
+            <form id="answerInput">
+                <input type="number" name="number">
+            </form>
             <div id="buttonSection">
                 <button id="statsBtn" class="allButtons">Stats</button>
                 <button id="historyBtn" class="allButtons">History</button>
@@ -66,19 +67,19 @@
     </div>
 
     <div id="statsContainer" class="hidden allContainers">
-        <h1 class="statsText headliner">Progress</h1>
+        <h1 class="statsText subtitle">Progress</h1>
         <h1 class="statsText"><span id="rightText">0</span> out of <span id="totalText">0</span></h1>
         <h1 class="statsText"><span id="percentageText">0</span>%</h1>
     </div>
 
     <div id="ansContainer" class="hidden allContainers">
-        <div id="rightContainer" class="ansList">
-            <h1 class="headliner">Right</h1>
+        <div class="ansList">
+            <h1 class="subtitle">Right</h1>
             <ul id="rightList">
             </ul>
         </div>
-        <div id="wrongContainer" class="ansList">
-            <h1 class="headliner">Missed</h1>
+        <div class="ansList">
+            <h1 class="subtitle">Missed</h1>
             <ul id="wrongList">
             </ul>
         </div>

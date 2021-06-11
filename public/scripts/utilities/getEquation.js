@@ -1,23 +1,17 @@
 const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
 
-const randNum = num => {
-	if (num === 1) {
-		return Math.floor(Math.random() * 9) + 1; // returns single-digit number
-	} else if (num === 2) {
-		return Math.floor(Math.random() * 90) + 10; // returns double-digit number
-	}
+const randNum = digits => {
+	const factor = Math.pow(10, digits) - Math.pow(10, digits - 1);
+	return Math.floor(Math.random() * factor) + 1;
 };
 
 const difficultySetting = () => {
 	const difficulty = gameSettings.difficulty.value;
 
-	if (difficulty === "easy") {
-		return [randNum(1), randNum(1)]; // two single-digit numbers
-	} else if (difficulty === "normal") {
-		return [randNum(2), randNum(1)]; // one two-digit and one single-digit
-	} else {
-		return [randNum(2), randNum(2)]; // two two-digit numbers
-	}
+	if (difficulty === "easy") return [randNum(1), randNum(1)]; // two single-digit numbers
+	if (difficulty === "normal") return [randNum(2), randNum(1)]; // one two-digit and one single-digit
+
+	return [randNum(2), randNum(2)]; // two two-digit numbers
 };
 
 const filterCheckBox = () => {

@@ -9,7 +9,7 @@ const resetNumsBoxes = () => {
 	ansContainer.style.border = "none";
 	statsContainer.style.height = "0px";
 	statsContainer.style.border = "none";
-	answer.classList.remove("hidden");
+	answerInput.classList.remove("hidden");
 	title.innerText = "Math Whiz";
 };
 

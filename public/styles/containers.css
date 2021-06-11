@@ -1,0 +1,39 @@
+/* styles for all containers */
+
+#mainContainer {
+	border: 1px solid #333333;
+	box-shadow: 2px 2px black;
+	width: 500px;
+	height: 300px;
+	text-align: center;
+}
+
+#statsContainer {
+	margin-top: 2em;
+	width: 300px;
+	height: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: 0.1s linear;
+	overflow: hidden;
+	text-align: center;
+}
+
+#ansContainer {
+	margin-top: 2em;
+	width: 350px;
+	height: 0px;
+	display: flex;
+	transition: 0.1s linear;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+#ansContainer div:first-of-type {
+	border-right: 1px solid black;
+}
+
+.allContainers {
+	background-color: rgb(146, 170, 192);
+}

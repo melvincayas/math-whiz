@@ -5,7 +5,7 @@ const gameContent = document.querySelector("#gameContent");
 const ansContainer = document.querySelector("#ansContainer");
 const rightList = document.querySelector("#rightList");
 const wrongList = document.querySelector("#wrongList");
-const answer = document.querySelector("#answer");
+const answerInput = document.querySelector("#answerInput");
 const num1 = document.querySelector("#num1");
 const num2 = document.querySelector("#num2");
 const sign = document.querySelector("#sign");
@@ -31,12 +31,12 @@ gameSettings.addEventListener("submit", e => {
 	fullEquation();
 });
 
-answer.addEventListener("submit", e => {
+answerInput.addEventListener("submit", e => {
 	e.preventDefault();
 	const correctAnswer = eval(
 		`parseInt(num1.innerText) ${sign.innerText} parseInt(num2.innerText)`
 	);
-	const userInput = parseInt(answer.number.value);
+	const userInput = parseInt(answerInput.number.value);
 	const string = `${num1.innerText} ${sign.innerText} ${num2.innerText}`;
 	const li = document.createElement("li");
 	li.classList.add("listStyle");
@@ -56,7 +56,7 @@ answer.addEventListener("submit", e => {
 
 	percentageText.innerText = Math.round((rightCount / totalCount) * 100);
 	fullEquation();
-	answer.number.value = "";
+	answerInput.number.value = "";
 });
 
 quitBtn.addEventListener("click", e => {

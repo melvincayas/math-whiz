@@ -1,0 +1,31 @@
+/* styles for overall app */
+
+body {
+	font-family: "Rubik", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#eef2f3,
+		#8e9eab
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#eef2f3,
+		#8e9eab
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#title {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	font-size: 3.5em;
+	color: black;
+}
+
+.hidden {
+	display: none !important;
+}

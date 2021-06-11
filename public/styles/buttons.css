@@ -1,0 +1,31 @@
+/* styles for all buttons */
+
+#buttonSection {
+	display: flex;
+	justify-content: space-evenly;
+	width: 90%;
+}
+
+.allButtons {
+	background-color: coral;
+	width: 50%;
+	height: 1.5em;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	border: 1px solid #333333;
+	box-shadow: 1px 1px black;
+}
+
+.allButtons:hover {
+	background-color: rgb(248, 88, 29);
+	transform: scale(1.02);
+	cursor: pointer;
+}
+
+.allButtons:focus {
+	outline: none;
+}
+
+.allButtons:active {
+	transform: scale(0.99);
+}

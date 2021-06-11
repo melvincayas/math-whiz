@@ -1,8 +1,9 @@
 const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
 
 const randNum = digits => {
-	const factor = Math.pow(10, digits) - Math.pow(10, digits - 1);
-	return Math.floor(Math.random() * factor) + 1;
+	const scale = Math.pow(10, digits - 1);
+	const factor = Math.pow(10, digits) - scale;
+	return Math.floor(Math.random() * factor) + scale;
 };
 
 const difficultySetting = () => {
@@ -17,9 +18,9 @@ const difficultySetting = () => {
 const filterCheckBox = () => {
 	const checkedOperators = [];
 
-	for (let i = 0; i < checkBoxes.length; i++) {
-		if (checkBoxes[i].checked) {
-			checkedOperators.push(checkBoxes[i].value);
+	for (let checkbox of checkBoxes) {
+		if (checkbox.checked) {
+			checkedOperators.push(checkbox.value);
 		}
 	}
 
@@ -32,9 +33,7 @@ const randOperator = () => {
 	const randNum = Math.floor(Math.random() * numOperators);
 
 	for (let i = 0; i < numOperators; i++) {
-		if (randNum === i) {
-			return pickedOperators[i];
-		}
+		if (randNum === i) return pickedOperators[i];
 	}
 };
 

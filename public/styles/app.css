@@ -24,8 +24,21 @@ body {
 	text-transform: uppercase;
 	font-size: 3.5em;
 	color: black;
+	animation: title-appear 2s ease-in-out;
 }
 
 .hidden {
 	display: none !important;
+}
+
+@keyframes title-appear {
+	from {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

@@ -6,6 +6,7 @@
 	width: 500px;
 	height: 300px;
 	text-align: center;
+	animation: container-appear 1s ease-in-out;
 }
 
 #statsContainer {
@@ -36,4 +37,19 @@
 
 .allContainers {
 	background-color: rgb(146, 170, 192);
+}
+
+@keyframes container-appear {
+	from {
+		opacity: 0;
+		transform: translateY(5em);
+	}
+	50% {
+		opacity: 0.5;
+		transform: translateY(-3em);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

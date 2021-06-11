@@ -44,7 +44,16 @@ const randOperator = () => {
 
 const fullEquation = () => {
 	const operator = randOperator();
-	const [firstNum, secondNum] = difficultySetting();
+	let [firstNum, secondNum] = difficultySetting();
+
+	// Prevents division with remainder
+	if (operator === "/" && firstNum % secondNum !== 0) {
+		let divisible = false;
+		while (!divisible) {
+			[firstNum, secondNum] = difficultySetting();
+			if (firstNum % secondNum === 0) divisible = true;
+		}
+	}
 
 	num1.innerText = firstNum;
 	num2.innerText = secondNum;

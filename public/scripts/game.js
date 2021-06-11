@@ -34,9 +34,9 @@ gameSettings.addEventListener("submit", e => {
 
 answer.addEventListener("submit", e => {
 	e.preventDefault();
-	const correctAnswer = Math.floor(
-		eval(`parseInt(num1.innerText) ${sign.innerText} parseInt(num2.innerText)`)
-	); // Math.floor for the division
+	const correctAnswer = eval(
+		`parseInt(num1.innerText) ${sign.innerText} parseInt(num2.innerText)`
+	);
 	const userInput = parseInt(answer.number.value);
 	const string = `${num1.innerText} ${sign.innerText} ${num2.innerText}`;
 	const li = document.createElement("li");

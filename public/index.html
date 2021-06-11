@@ -18,8 +18,8 @@
 <body>
     <h1 id="title">Math Whiz</h1>
 
-    <div id="mainContainer" class="allContainers">
-        <form id="gameSettings">
+    <div id="main-container" class="all-containers">
+        <form id="game-settings">
             <div>
                 <h3>Select difficulty:</h3>
                 <input type="radio" name="difficulty" value="easy">
@@ -48,39 +48,39 @@
                 <label for="minute" class="selection">60 Second Fury</label>
             </div>
             <div>
-                <button class="allButtons">Start Game</button>
+                <button class="all-buttons">Start Game</button>
             </div>
         </form>
-        <div id="gameContent" class="hidden">
+        <div id="game-content" class="hidden">
             <div>
                 <h1 id="equation"><span id="num1">X</span> <span id="sign">+</span> <span id="num2">Y</span></h1>
             </div>
-            <form id="answerInput">
+            <form id="answer-input">
                 <input type="number" name="number">
             </form>
-            <div id="buttonSection">
-                <button id="statsBtn" class="allButtons">Stats</button>
-                <button id="historyBtn" class="allButtons">History</button>
-                <button id="quitBtn" class="allButtons">End Game</button>
+            <div id="button-section">
+                <button id="stats-btn" class="all-buttons">Stats</button>
+                <button id="history-btn" class="all-buttons">History</button>
+                <button id="quit-btn" class="all-buttons">End Game</button>
             </div>
         </div>
     </div>
 
-    <div id="statsContainer" class="hidden allContainers">
-        <h1 class="statsText subtitle">Progress</h1>
-        <h1 class="statsText"><span id="rightText">0</span> out of <span id="totalText">0</span></h1>
-        <h1 class="statsText"><span id="percentageText">0</span>%</h1>
+    <div id="stats-container" class="hidden all-containers">
+        <h1 class="stats-text subtitle">Progress</h1>
+        <h1 class="stats-text"><span id="right-text">0</span> out of <span id="total-text">0</span></h1>
+        <h1 class="stats-text"><span id="percentage-text">0</span>%</h1>
     </div>
 
-    <div id="ansContainer" class="hidden allContainers">
-        <div class="ansList">
+    <div id="answer-container" class="hidden all-containers">
+        <div class="answer-list">
             <h1 class="subtitle">Right</h1>
-            <ul id="rightList">
+            <ul id="right-list">
             </ul>
         </div>
-        <div class="ansList">
+        <div class="answer-list">
             <h1 class="subtitle">Missed</h1>
-            <ul id="wrongList">
+            <ul id="wrong-list">
             </ul>
         </div>
     </div>

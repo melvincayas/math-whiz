@@ -52,5 +52,9 @@ const fullEquation = () => {
 
 	num1.innerText = firstNum;
 	num2.innerText = secondNum;
-	sign.innerText = operator;
+
+	if (operator === "*") return (sign.innerText = "×"); // for times display purposes
+	if (operator === "/") return (sign.innerText = "÷"); // for division display purposes
+
+	sign.innerText = operator; // plus or minus displayed as is
 };

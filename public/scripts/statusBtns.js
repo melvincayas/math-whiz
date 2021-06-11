@@ -1,5 +1,5 @@
-const historyBtn = document.querySelector("#historyBtn");
-const statsBtn = document.querySelector("#statsBtn");
+const historyBtn = document.querySelector("#history-btn");
+const statsBtn = document.querySelector("#stats-btn");
 
 historyBtn.addEventListener("click", () => {
 	if (ansContainer.style.height === "0px" || ansContainer.style.height === "") {

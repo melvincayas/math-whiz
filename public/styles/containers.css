@@ -1,6 +1,6 @@
 /* styles for all containers */
 
-#mainContainer {
+#main-container {
 	border: 1px solid #333333;
 	box-shadow: 2px 2px black;
 	width: 500px;
@@ -9,7 +9,7 @@
 	animation: container-appear 1s ease-in-out;
 }
 
-#statsContainer {
+#stats-container {
 	margin-top: 2em;
 	width: 300px;
 	height: 0px;
@@ -21,7 +21,7 @@
 	text-align: center;
 }
 
-#ansContainer {
+#answer-container {
 	margin-top: 2em;
 	width: 350px;
 	height: 0px;
@@ -31,11 +31,11 @@
 	overflow-y: auto;
 }
 
-#ansContainer div:first-of-type {
+#answer-container div:first-of-type {
 	border-right: 1px solid black;
 }
 
-.allContainers {
+.all-containers {
 	background-color: rgb(146, 170, 192);
 }
 

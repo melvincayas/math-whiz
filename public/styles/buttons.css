@@ -1,12 +1,12 @@
 /* styles for all buttons */
 
-#buttonSection {
+#button-section {
 	display: flex;
 	justify-content: space-evenly;
 	width: 90%;
 }
 
-.allButtons {
+.all-buttons {
 	background-color: coral;
 	width: 50%;
 	height: 1.5em;
@@ -16,16 +16,16 @@
 	box-shadow: 1px 1px black;
 }
 
-.allButtons:hover {
+.all-buttons:hover {
 	background-color: rgb(248, 88, 29);
 	transform: scale(1.02);
 	cursor: pointer;
 }
 
-.allButtons:focus {
+.all-buttons:focus {
 	outline: none;
 }
 
-.allButtons:active {
+.all-buttons:active {
 	transform: scale(0.99);
 }

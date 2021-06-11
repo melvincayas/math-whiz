@@ -1,17 +1,17 @@
-const gameSettings = document.querySelector("#gameSettings");
-const quitBtn = document.querySelector("#quitBtn");
-const statsContainer = document.querySelector("#statsContainer");
-const gameContent = document.querySelector("#gameContent");
-const ansContainer = document.querySelector("#ansContainer");
-const rightList = document.querySelector("#rightList");
-const wrongList = document.querySelector("#wrongList");
-const answerInput = document.querySelector("#answerInput");
+const gameSettings = document.querySelector("#game-settings");
+const quitBtn = document.querySelector("#quit-btn");
+const statsContainer = document.querySelector("#stats-container");
+const gameContent = document.querySelector("#game-content");
+const ansContainer = document.querySelector("#answer-container");
+const rightList = document.querySelector("#right-list");
+const wrongList = document.querySelector("#wrong-list");
+const answerInput = document.querySelector("#answer-input");
 const num1 = document.querySelector("#num1");
 const num2 = document.querySelector("#num2");
 const sign = document.querySelector("#sign");
-const rightText = document.querySelector("#rightText");
-const totalText = document.querySelector("#totalText");
-const percentageText = document.querySelector("#percentageText");
+const rightText = document.querySelector("#right-text");
+const totalText = document.querySelector("#total-text");
+const percentageText = document.querySelector("#percentage-text");
 
 let totalCount = 0;
 let rightCount = 0;
@@ -33,13 +33,18 @@ gameSettings.addEventListener("submit", e => {
 
 answerInput.addEventListener("submit", e => {
 	e.preventDefault();
+
+	let trueOperator = sign.innerText;
+	if (sign.innerText === "×") trueOperator = "*";
+	if (sign.innerText === "÷") trueOperator = "/";
+
 	const correctAnswer = eval(
-		`parseInt(num1.innerText) ${sign.innerText} parseInt(num2.innerText)`
+		`parseInt(num1.innerText) ${trueOperator} parseInt(num2.innerText)`
 	);
 	const userInput = parseInt(answerInput.number.value);
 	const string = `${num1.innerText} ${sign.innerText} ${num2.innerText}`;
 	const li = document.createElement("li");
-	li.classList.add("listStyle");
+	li.classList.add("list-style");
 	li.append(string);
 
 	if (userInput === correctAnswer) {

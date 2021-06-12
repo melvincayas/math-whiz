@@ -6,32 +6,56 @@
 	width: 90%;
 }
 
-.all-buttons {
+#answer-btn {
+	height: 100%;
+	width: 40px;
+	background-color: black;
+	color: coral;
+}
+
+#answer-btn:hover {
+	background-color: coral;
+	color: black;
+}
+
+.event-btns {
 	background-color: coral;
 	width: 50%;
 	height: 1.5em;
-	font-size: 1.5em;
 	text-transform: uppercase;
-	border: 1px solid #333333;
-	box-shadow: 1px 1px black;
 }
 
-.all-buttons:hover {
-	background-color: rgb(248, 88, 29);
+.event-btns:hover {
+	background-color: black;
+	color: coral;
+}
+
+.all-btns {
+	border: 1px solid #333;
+	box-shadow: 1px 1px black;
+	font-size: 1.5em;
+	transition: transform 0.1s ease-in-out;
+}
+
+.all-btns:hover {
 	transform: scale(1.02);
 	cursor: pointer;
 }
 
-.all-buttons:focus {
+.all-btns:focus {
 	outline: none;
 }
 
-.all-buttons:active {
+.all-btns:active {
 	transform: scale(0.99);
 }
 
 @media all and (max-width: 575px) {
-	.all-buttons {
-		font-size: 1em;
+	.all-btns {
+		font-size: 1.25em;
+	}
+
+	#answer-btn {
+		font-size: 1.35em;
 	}
 }

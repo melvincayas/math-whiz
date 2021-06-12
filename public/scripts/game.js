@@ -12,6 +12,7 @@ const sign = document.querySelector("#sign");
 const rightText = document.querySelector("#right-text");
 const totalText = document.querySelector("#total-text");
 const percentageText = document.querySelector("#percentage-text");
+const errorText = document.querySelector("#error-text");
 
 let totalCount = 0;
 let rightCount = 0;
@@ -19,13 +20,9 @@ let rightCount = 0;
 gameSettings.addEventListener("submit", e => {
 	e.preventDefault();
 
-	if (filterCheckBox().length === 0) {
-		return alert("Please select an operator.");
-	}
+	if (validOperators()) return;
 
-	if (gameSettings.game.value === "minute") {
-		countDown();
-	}
+	if (gameSettings.game.value === "minute") countDown();
 
 	toggleClasses();
 	fullEquation();
@@ -33,6 +30,8 @@ gameSettings.addEventListener("submit", e => {
 
 answerInput.addEventListener("submit", e => {
 	e.preventDefault();
+
+	if (validAnswer()) return;
 
 	let trueOperator = sign.innerText;
 	if (sign.innerText === "×") trueOperator = "*";

@@ -32,8 +32,18 @@ body {
 	transform: scale(1.02);
 }
 
+#error-text {
+	color: crimson;
+}
+
 .hidden {
 	display: none !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 @keyframes title-appear {
@@ -51,5 +61,9 @@ body {
 @media all and (max-width: 575px) {
 	#title {
 		font-size: 3em;
+	}
+
+	#error-text {
+		font-size: 1.25em;
 	}
 }

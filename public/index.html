@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,300&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="/styles/containers.css">
@@ -17,7 +18,6 @@
 
 <body>
     <h1 id="title">Math Whiz</h1>
-
     <div id="main-container" class="all-containers">
         <form id="game-settings">
             <div>
@@ -48,23 +48,26 @@
                 <label for="minute" class="selection">60 Second Fury</label>
             </div>
             <div>
-                <button class="all-buttons">Start</button>
+                <button class="all-btns event-btns">Start</button>
             </div>
         </form>
         <div id="game-content" class="hidden">
             <div>
                 <h1 id="equation"><span id="num1">X</span> <span id="sign">+</span> <span id="num2">Y</span></h1>
             </div>
-            <form id="answer-input">
+            <form id="answer-input" autocomplete="off">
                 <input type="number" name="number">
+                <button id="answer-btn" class="all-btns"><i class="fas fa-equals"></i></button>
             </form>
             <div id="button-section">
-                <button id="stats-btn" class="all-buttons">Stats</button>
-                <button id="history-btn" class="all-buttons">History</button>
-                <button id="quit-btn" class="all-buttons">Quit</button>
+                <button id="stats-btn" class="all-btns event-btns">Stats</button>
+                <button id="history-btn" class="all-btns event-btns">History</button>
+                <button id="quit-btn" class="all-btns event-btns">Quit</button>
             </div>
         </div>
     </div>
+
+    <h2 id="error-text" class="hidden"></h2>
 
     <div id="stats-container" class="hidden all-containers">
         <h1 class="stats-text subtitle">Progress</h1>
@@ -90,6 +93,7 @@
     <script src="/scripts/utilities/getEquation.js"></script>
     <script src="/scripts/utilities/reset.js"></script>
     <script src="/scripts/utilities/helpers.js"></script>
+    <script src="/scripts/utilities/errors.js"></script>
 </body>
 
 </html>

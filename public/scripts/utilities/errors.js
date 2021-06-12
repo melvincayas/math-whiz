@@ -2,13 +2,13 @@ const validOperators = () => {
 	if (filterCheckBox().length === 0) {
 		errorText.innerText = "Please select an operator.";
 		errorText.classList.remove("hidden");
-		return true;
+		return false;
 	}
 
-	if (filterCheckBox().length > 0 && errorText.innerText !== "") {
+	if (filterCheckBox().length > 0) {
 		errorText.innerText = "";
 		errorText.classList.add("hidden");
-		return false;
+		return true;
 	}
 };
 
@@ -16,12 +16,12 @@ const validAnswer = () => {
 	if (answerInput.number.value === "") {
 		errorText.innerText = "Please enter a number.";
 		errorText.classList.remove("hidden");
-		return true;
+		return false;
 	}
 
-	if (answerInput.number.value !== "" && errorText.innerText !== "") {
+	if (answerInput.number.value !== "") {
 		errorText.innerText = "";
 		errorText.classList.add("hidden");
-		return false;
+		return true;
 	}
 };

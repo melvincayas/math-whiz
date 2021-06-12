@@ -1,27 +1,24 @@
 const historyBtn = document.querySelector("#history-btn");
 const statsBtn = document.querySelector("#stats-btn");
+const statsContainer = document.querySelector("#stats-container");
+const ansContainer = document.querySelector("#answer-container");
 
 historyBtn.addEventListener("click", () => {
-	if (ansContainer.style.height === "0px" || ansContainer.style.height === "") {
+	if (ansContainer.style.height === "") {
 		ansContainer.style.height = "350px";
-		ansContainer.style.border = "1px solid #333333";
-		ansContainer.style.boxShadow = "2px 2px black";
+		ansContainer.style.border = "1px solid #333";
 	} else {
-		ansContainer.style.height = "0px";
+		ansContainer.style.height = "";
 		ansContainer.style.border = "none";
 	}
 });
 
 statsBtn.addEventListener("click", () => {
-	if (
-		statsContainer.style.height === "0px" ||
-		statsContainer.style.height === ""
-	) {
+	if (statsContainer.style.height === "") {
 		statsContainer.style.height = "140px";
-		statsContainer.style.border = "1px solid black";
-		statsContainer.style.boxShadow = "2px 2px black";
+		statsContainer.style.border = "1px solid #333";
 	} else {
-		statsContainer.style.height = "0px";
+		statsContainer.style.height = "";
 		statsContainer.style.border = "none";
 	}
 });

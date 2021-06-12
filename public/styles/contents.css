@@ -21,6 +21,17 @@
 	align-items: center;
 }
 
+#question-num-display {
+	text-align: left;
+	margin: 0 auto;
+	padding: 0;
+	transition: transform 0.2s ease-in-out;
+}
+
+#question-num-display:hover {
+	transform: scale(1.02);
+}
+
 #equation {
 	padding: 0;
 	margin: 0;

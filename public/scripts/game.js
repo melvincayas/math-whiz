@@ -1,8 +1,6 @@
 const gameSettings = document.querySelector("#game-settings");
 const quitBtn = document.querySelector("#quit-btn");
-const statsContainer = document.querySelector("#stats-container");
 const gameContent = document.querySelector("#game-content");
-const ansContainer = document.querySelector("#answer-container");
 const rightList = document.querySelector("#right-list");
 const wrongList = document.querySelector("#wrong-list");
 const answerInput = document.querySelector("#answer-input");
@@ -11,6 +9,7 @@ const num2 = document.querySelector("#num2");
 const sign = document.querySelector("#sign");
 const rightText = document.querySelector("#right-text");
 const totalText = document.querySelector("#total-text");
+const questionNum = document.querySelector("#question-num");
 const percentageText = document.querySelector("#percentage-text");
 const errorText = document.querySelector("#error-text");
 
@@ -20,7 +19,7 @@ let rightCount = 0;
 gameSettings.addEventListener("submit", e => {
 	e.preventDefault();
 
-	if (validOperators()) return;
+	if (!validOperators()) return;
 
 	if (gameSettings.game.value === "minute") countDown();
 
@@ -31,7 +30,7 @@ gameSettings.addEventListener("submit", e => {
 answerInput.addEventListener("submit", e => {
 	e.preventDefault();
 
-	if (validAnswer()) return;
+	if (!validAnswer()) return;
 
 	let trueOperator = sign.innerText;
 	if (sign.innerText === "×") trueOperator = "*";
@@ -58,14 +57,14 @@ answerInput.addEventListener("submit", e => {
 		totalText.innerText = totalCount;
 	}
 
+	questionNum.innerText = totalCount + 1;
 	percentageText.innerText = Math.round((rightCount / totalCount) * 100);
-	fullEquation();
 	answerInput.number.value = "";
+	fullEquation();
 });
 
 quitBtn.addEventListener("click", e => {
 	e.preventDefault();
-
 	toggleClasses();
 	removeAllChildNodes();
 	resetNumsBoxes();

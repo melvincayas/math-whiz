@@ -6,12 +6,12 @@ const resetNumsBoxes = () => {
 	rightText.innerText = 0;
 	errorText.innerText = "";
 	percentageText.innerText = 0;
-	ansContainer.style.height = "0px";
+	ansContainer.style.height = "";
 	ansContainer.style.border = "none";
-	statsContainer.style.height = "0px";
+	statsContainer.style.height = "";
 	statsContainer.style.border = "none";
 	answerInput.classList.remove("hidden");
-	title.innerText = "Math Whiz";
+	title.innerText = "Math Whizard";
 };
 
 const removeAllChildNodes = () => {

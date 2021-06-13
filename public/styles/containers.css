@@ -1,6 +1,7 @@
 /* styles for all containers */
 
 #main-container {
+	position: relative;
 	border: 1px solid #333333;
 	width: 90%;
 	max-width: 500px;

@@ -35,6 +35,23 @@ body {
 	color: coral;
 }
 
+#sound {
+	position: absolute;
+	padding: 0.5em;
+	font-size: 1.5em;
+	top: 0;
+	right: 0;
+	transition: 0.1s ease-in-out;
+	filter: drop-shadow(1px 1px 1px #333);
+}
+
+#sound:hover {
+	cursor: pointer;
+	color: coral;
+	transform: scale(1.05);
+	filter: drop-shadow(8px 8px 10px #333);
+}
+
 #error-text {
 	color: crimson;
 }

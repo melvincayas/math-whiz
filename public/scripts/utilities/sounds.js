@@ -1,3 +1,6 @@
+const volume = document.getElementById("sound");
+console.log(volume);
+
 const start = new Howl({
 	src: ["/sounds/start.mp3"],
 });
@@ -24,4 +27,14 @@ const quit = new Howl({
 
 const error = new Howl({
 	src: ["/sounds/error.mp3"],
+});
+
+volume.addEventListener("click", () => {
+	if (volume.classList.contains("fa-volume-up")) {
+		volume.classList.remove("fa-volume-up");
+		volume.classList.add("fa-volume-mute");
+	} else {
+		volume.classList.remove("fa-volume-mute");
+		volume.classList.add("fa-volume-up");
+	}
 });

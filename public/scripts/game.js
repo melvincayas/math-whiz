@@ -21,6 +21,8 @@ gameSettings.addEventListener("submit", e => {
 
 	if (!validOperators()) return;
 
+	start.play();
+
 	if (gameSettings.game.value === "minute") countDown();
 
 	toggleClasses();
@@ -46,12 +48,14 @@ answerInput.addEventListener("submit", e => {
 	li.append(string);
 
 	if (userInput === correctAnswer) {
+		correct.play();
 		rightList.append(li);
 		rightCount++;
 		totalCount++;
 		rightText.innerText = rightCount;
 		totalText.innerText = totalCount;
 	} else {
+		incorrect.play();
 		wrongList.append(li);
 		totalCount++;
 		totalText.innerText = totalCount;
@@ -65,6 +69,7 @@ answerInput.addEventListener("submit", e => {
 
 quitBtn.addEventListener("click", e => {
 	e.preventDefault();
+	quit.play();
 	toggleClasses();
 	removeAllChildNodes();
 	resetNumsBoxes();

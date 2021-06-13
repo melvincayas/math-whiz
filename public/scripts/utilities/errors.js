@@ -1,5 +1,6 @@
 const validOperators = () => {
 	if (filterCheckBox().length === 0) {
+		error.play();
 		errorText.innerText = "Please select an operator.";
 		errorText.classList.remove("hidden");
 		return false;
@@ -14,6 +15,7 @@ const validOperators = () => {
 
 const validAnswer = () => {
 	if (answerInput.number.value === "") {
+		error.play();
 		errorText.innerText = "Please enter a number.";
 		errorText.classList.remove("hidden");
 		return false;

@@ -2,6 +2,7 @@ const resetNumsBoxes = () => {
 	totalCount = 0;
 	rightCount = 0;
 	wrongCount = 0;
+	questionNum.innerText = 1;
 	totalText.innerText = 0;
 	rightText.innerText = 0;
 	errorText.innerText = "";

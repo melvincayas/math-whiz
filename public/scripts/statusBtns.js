@@ -5,6 +5,7 @@ const ansContainer = document.querySelector("#answer-container");
 
 historyBtn.addEventListener("click", () => {
 	if (ansContainer.style.height === "") {
+		menu.play();
 		ansContainer.style.height = "350px";
 		ansContainer.style.border = "1px solid #333";
 	} else {
@@ -15,6 +16,7 @@ historyBtn.addEventListener("click", () => {
 
 statsBtn.addEventListener("click", () => {
 	if (statsContainer.style.height === "") {
+		menu.play();
 		statsContainer.style.height = "140px";
 		statsContainer.style.border = "1px solid #333";
 	} else {

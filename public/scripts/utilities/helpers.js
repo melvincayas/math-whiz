@@ -17,6 +17,7 @@ const countDown = () => {
 			title.innerText = "Math Whizard";
 		} else if (timeLeft === 0) {
 			clearInterval(countdown);
+			timer.play();
 			answerInput.classList.add("hidden");
 			title.innerText = "Time's up! Try again?";
 		}

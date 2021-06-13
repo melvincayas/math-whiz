@@ -17,7 +17,7 @@ historyBtn.addEventListener("click", () => {
 statsBtn.addEventListener("click", () => {
 	if (statsContainer.style.height === "") {
 		menu.play();
-		statsContainer.style.height = "140px";
+		statsContainer.style.height = "100%";
 		statsContainer.style.border = "1px solid #333";
 	} else {
 		statsContainer.style.height = "";

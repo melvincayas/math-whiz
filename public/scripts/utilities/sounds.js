@@ -1,5 +1,4 @@
-const volume = document.getElementById("sound");
-console.log(volume);
+const volume = document.getElementById("sound-btn");
 
 const start = new Howl({
 	src: ["/sounds/start.mp3"],
@@ -30,11 +29,13 @@ const error = new Howl({
 });
 
 volume.addEventListener("click", () => {
-	if (volume.classList.contains("fa-volume-up")) {
-		volume.classList.remove("fa-volume-up");
-		volume.classList.add("fa-volume-mute");
+	if (volume.firstChild.classList.contains("fa-volume-up")) {
+		Howler.volume(0);
+		volume.firstChild.classList.remove("fa-volume-up");
+		volume.firstChild.classList.add("fa-volume-mute");
 	} else {
-		volume.classList.remove("fa-volume-mute");
-		volume.classList.add("fa-volume-up");
+		Howler.volume(1);
+		volume.firstChild.classList.remove("fa-volume-mute");
+		volume.firstChild.classList.add("fa-volume-up");
 	}
 });

@@ -91,6 +91,11 @@
 .list-style {
 	margin: 2px;
 	font-size: 1.75em;
+	transition: 0.1s ease-in-out;
+}
+
+.list-style:hover {
+	transform: scale(1.05);
 }
 
 .stats-text {
@@ -108,7 +113,7 @@
 	}
 
 	#equation {
-		font-size: 4.5em;
+		font-size: 4em;
 	}
 
 	.stats-text,

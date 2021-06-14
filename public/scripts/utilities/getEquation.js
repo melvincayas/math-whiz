@@ -3,7 +3,16 @@ const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
 const randNum = digits => {
 	const scale = Math.pow(10, digits - 1);
 	const factor = Math.pow(10, digits) - scale;
-	return Math.floor(Math.random() * factor) + scale;
+	const useNegative = gameSettings.sign.value;
+
+	let randNum = Math.floor(Math.random() * factor) + scale;
+
+	if (useNegative === "true") {
+		const randSign = Math.floor(Math.random() * 2); // 0 is negative, 1 is positive
+		if (randSign === 0) randNum = -randNum;
+	}
+
+	return randNum;
 };
 
 const difficultySetting = () => {

@@ -23,37 +23,44 @@
         <form id="game-settings">
             <div>
                 <h3>Select difficulty:</h3>
-                <input type="radio" name="difficulty" value="easy">
+                <input id="easy" type="radio" name="difficulty" value="easy">
                 <label for="easy" class="selection">Easy</label>
-                <input type="radio" name="difficulty" value="normal" checked>
+                <input id="normal" type="radio" name="difficulty" value="normal" checked>
                 <label for="normal" class="selection">Normal</label>
-                <input type="radio" name="difficulty" value="hard">
+                <input id="hard" type="radio" name="difficulty" value="hard">
                 <label for="hard" class="selection">Hard</label>
             </div>
             <div>
                 <h3>Select operators:</h3>
-                <input type="checkbox" name="plus" value="+" checked>
+                <input id="plus" type="checkbox" name="operator" value="+" checked>
                 <label for="plus" class="selection">Addition</label>
-                <input type="checkbox" name="minus" value="-">
+                <input id="minus" type="checkbox" name="operator" value="-">
                 <label for="minus" class="selection">Subtraction</label><br>
-                <input type="checkbox" name="multiply" value="*">
+                <input id="multiply" type="checkbox" name="operator" value="*">
                 <label for="multiply" class="selection">Multiplication</label>
-                <input type="checkbox" name="divide" value="/">
+                <input id="divide" type="checkbox" name="operator" value="/">
                 <label for="divide" class="selection">Division</label>
             </div>
             <div>
                 <h3>Select game style:</h3>
-                <input type="radio" name="game" value="unlimited" checked>
+                <input id="unlimited" type="radio" name="game" value="unlimited" checked>
                 <label for="unlimited" class="selection">Unlimited</label>
-                <input type="radio" name="game" value="minute">
+                <input id="minute" type="radio" name="game" value="minute">
                 <label for="minute" class="selection">60 Second Fury</label>
+            </div>
+            <div>
+                <h3>Use negative numbers:</h3>
+                <input id="yes-negatives" type="radio" name="sign" value="true">
+                <label for="yes-negatives" class="selection">Yes</label>
+                <input id="no-negatives" type="radio" name="sign" value="false" checked>
+                <label for="no-negatives" class="selection">No</label>
             </div>
             <div>
                 <button class="all-btns event-btns">Start</button>
             </div>
         </form>
         <div id="game-content" class="hidden">
-            <h3 id="question-num-display">Question #<span id="question-num">1</span></h3>
+            <h1 id="question-num-display">Question #<span id="question-num">1</span></h1>
             <div>
                 <h1 id="equation"><span id="num1">X</span> <span id="sign">+</span> <span id="num2">Y</span></h1>
             </div>

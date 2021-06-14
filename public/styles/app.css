@@ -37,6 +37,7 @@ body {
 
 #error-text {
 	color: crimson;
+	margin-bottom: 0;
 }
 
 .hidden {

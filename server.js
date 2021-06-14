@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
 	res.sendFile("index.html");
 });
 
+app.use("*", (req, res) => {
+	res.redirect("/");
+});
+
 app.listen(PORT, () => {
 	console.log(`Listening on Port ${PORT}!`);
 });

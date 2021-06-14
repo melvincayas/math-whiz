@@ -25,16 +25,16 @@
 
 #answer-container {
 	margin-top: 2em;
+	margin-bottom: 2em;
 	width: 90%;
 	max-width: 500px;
 	height: 0px;
 	display: flex;
 	transition: 0.1s linear;
 	overflow: hidden;
-	overflow-y: auto;
 }
 
-#answer-container div:first-of-type {
+#answer-container .left-box {
 	border-right: 1px solid black;
 }
 

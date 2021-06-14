@@ -6,6 +6,7 @@ const resetNumsBoxes = () => {
 	totalText.innerText = 0;
 	rightText.innerText = 0;
 	errorText.innerText = "";
+	answerInput.number.value = "";
 	percentageText.innerText = "";
 	percentageText.style.color = "black";
 	ansContainer.style.height = "";

@@ -29,7 +29,7 @@
 }
 
 #question-num-display:hover {
-	transform: scale(1.02);
+	transform: scale(1.05);
 }
 
 #equation {
@@ -67,18 +67,27 @@
 	background-color: rgb(247, 242, 242);
 }
 
+#right-list .list-style:hover {
+	color: green;
+}
+
+#wrong-list .list-style:hover {
+	color: crimson;
+}
+
 .subtitle {
 	background-color: coral;
 	border-bottom: 1px solid #333333;
 	padding: 0;
 	margin: 0;
+	text-align: center;
 }
 
 .answer-list {
 	margin: 0;
 	width: 50%;
 	height: 100%;
-	text-align: center;
+	text-align: left;
 	overflow-y: auto;
 }
 
@@ -90,7 +99,9 @@
 
 .list-style {
 	margin: 2px;
-	font-size: 1.75em;
+	padding-left: 0.5em;
+	padding-top: 0.25em;
+	font-size: 1.35em;
 	transition: 0.1s ease-in-out;
 }
 
@@ -122,6 +133,6 @@
 	}
 
 	.list-style {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 }

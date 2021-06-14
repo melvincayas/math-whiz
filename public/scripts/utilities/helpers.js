@@ -24,3 +24,11 @@ const countDown = () => {
 		timeLeft--;
 	}, 1000);
 };
+
+const percentageColors = percentage => {
+	if (percentage <= 20) return (percentageText.style.color = "firebrick");
+	if (percentage <= 40) return (percentageText.style.color = "crimson");
+	if (percentage <= 60) return (percentageText.style.color = "red");
+	if (percentage <= 80) return (percentageText.style.color = "orangered");
+	if (percentage <= 100) return (percentageText.style.color = "green");
+};

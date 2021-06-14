@@ -32,6 +32,8 @@ gameSettings.addEventListener("submit", e => {
 answerInput.addEventListener("submit", e => {
 	e.preventDefault();
 
+	totalCount++;
+
 	if (!validAnswer()) return;
 
 	let trueOperator = sign.innerText;
@@ -42,7 +44,7 @@ answerInput.addEventListener("submit", e => {
 		`parseInt(num1.innerText) ${trueOperator} parseInt(num2.innerText)`
 	);
 	const userInput = parseInt(answerInput.number.value);
-	const string = `${num1.innerText} ${sign.innerText} ${num2.innerText}`;
+	const string = `Q${totalCount}. ${num1.innerText} ${sign.innerText} ${num2.innerText} = ${userInput}`;
 	const li = document.createElement("li");
 	li.classList.add("list-style");
 	li.append(string);
@@ -51,18 +53,18 @@ answerInput.addEventListener("submit", e => {
 		correct.play();
 		rightList.append(li);
 		rightCount++;
-		totalCount++;
 		rightText.innerText = rightCount;
 		totalText.innerText = totalCount;
 	} else {
 		incorrect.play();
 		wrongList.append(li);
-		totalCount++;
 		totalText.innerText = totalCount;
 	}
 
 	questionNum.innerText = totalCount + 1;
-	percentageText.innerText = Math.round((rightCount / totalCount) * 100);
+	const percentage = Math.round((rightCount / totalCount) * 100);
+	percentageText.innerText = `${percentage}%`;
+	percentageColors(percentage);
 	answerInput.number.value = "";
 	fullEquation();
 });

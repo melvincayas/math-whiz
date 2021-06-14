@@ -46,6 +46,7 @@
 }
 
 #answer-input {
+	width: 70%;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1em;
@@ -125,6 +126,10 @@
 
 	#equation {
 		font-size: 4em;
+	}
+
+	#answer-input input {
+		width: 80%;
 	}
 
 	.stats-text,

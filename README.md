@@ -32,7 +32,7 @@ The user can choose whether equations will include negative numbers.
 
 ## Future of Math Whizard
 
-I started this project in March 2021 while taking a full-stack web developer course on Udemy. My goal was to see what I could do with JavaScript.
+I started this project in March 2021 while taking a [full-stack web developer course](https://www.udemy.com/course/the-web-developer-bootcamp/) on Udemy. My goal was to see what I could do with JavaScript.
 
 I revisited this project in June 2021 and I -
 

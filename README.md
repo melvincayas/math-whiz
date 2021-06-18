@@ -37,6 +37,7 @@ I started this project in March 2021 while taking a full-stack web developer cou
 I revisited this project in June 2021 and I -
 
 - Refactored the code
+- Added error handling for empty inputs
 - Modified the game layout
 - Included the use of negative numbers
 - Added sound, hover, and color effects for playfulness

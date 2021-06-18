@@ -7,6 +7,15 @@ const toggleClasses = () => {
 	statsContainer.classList.toggle("hidden");
 };
 
+const makeNumsDivisible = () => {
+	let divisible = false;
+	while (!divisible) {
+		[firstNum, secondNum] = difficultySetting();
+		if (firstNum % secondNum === 0) divisible = true;
+	}
+	return [firstNum, secondNum];
+};
+
 const countDown = () => {
 	let timeLeft = 60;
 

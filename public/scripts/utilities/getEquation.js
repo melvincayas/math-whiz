@@ -50,13 +50,8 @@ const fullEquation = () => {
 	const operator = randOperator();
 	let [firstNum, secondNum] = difficultySetting();
 
-	// Prevents division with remainder
 	if (operator === "/" && firstNum % secondNum !== 0) {
-		let divisible = false;
-		while (!divisible) {
-			[firstNum, secondNum] = difficultySetting();
-			if (firstNum % secondNum === 0) divisible = true;
-		}
+		[firstNum, secondNum] = makeNumsDivisible();
 	}
 
 	num1.innerText = firstNum;

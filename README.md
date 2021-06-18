@@ -1,7 +1,37 @@
-# math-whiz
+# Math Whizard
 
-Math game using HTML, CSS, and Vanilla JS.
+This is a project I started while I was learning JavaScript. It's a math game using HTML, CSS, and Vanilla JS! Feel free to check it out [here](https://www.mathwhizard.com).
 
-6/10/21: This is an old project I created while I was learning JavaScript a few months ago. I'll be adding some finishing touches to the UI and fixing some of the logic.
+## Game Settings
 
-6/14/21: If this were to be expanded, I'd probably include a list of top scores from players. Or let users create accounts to show their performance history and compare with friends.
+There are multiple settings the user can choose to customize the game.
+
+### Difficulty
+
+- **Easy** - two single-digit numbers
+- **Medium** - one double-digit number and one single-digit number
+- **Hard** - two double-digit numbers
+
+### Operators
+
+The user can pick which operators to use:
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+
+### Game Style
+
+- **Unlimited** - Neverending equations
+- **60 Second Fury** - 60 second timer to add the pressure
+
+### Use of Negative Numbers
+
+The user can choose whether equations will include negative numbers.
+
+## Contact
+
+Melvin Cayas - [cayasmj@gmail.com](mailto:cayasmj@gmail.com?subject=[GitHub])
+
+Project Link: [https://github.com/melvincayas/math-whizard](https://github.com/melvincayas/math-whizard)

@@ -25,8 +25,8 @@ gameSettings.addEventListener("submit", e => {
 
 	if (gameSettings.game.value === "minute") countDown();
 
-	toggleClasses();
-	fullEquation();
+	toggleHiddenDisplays();
+	getRandomEquation();
 });
 
 answerInput.addEventListener("submit", e => {
@@ -36,43 +36,19 @@ answerInput.addEventListener("submit", e => {
 
 	if (!validAnswer()) return;
 
-	let trueOperator = sign.innerText;
-	if (sign.innerText === "×") trueOperator = "*";
-	if (sign.innerText === "÷") trueOperator = "/";
-
-	const correctAnswer = eval(
-		`parseInt(num1.innerText) ${trueOperator} parseInt(num2.innerText)`
-	);
-	const userInput = parseInt(answerInput.number.value);
-	const string = `Q${totalCount}. ${num1.innerText} ${sign.innerText} ${num2.innerText} = ${userInput}`;
-	const li = document.createElement("li");
-	li.classList.add("list-style");
-	li.append(string);
-
-	if (userInput === correctAnswer) {
-		correct.play();
-		rightList.append(li);
-		rightCount++;
-		rightText.innerText = rightCount;
-		totalText.innerText = totalCount;
-	} else {
-		incorrect.play();
-		wrongList.append(li);
-		totalText.innerText = totalCount;
-	}
+	const correctAnswer = calculateCorrectAnswer();
+	checkUserAnswer(correctAnswer);
+	handleUserProgress();
 
 	questionNum.innerText = totalCount + 1;
-	const percentage = Math.round((rightCount / totalCount) * 100);
-	percentageText.innerText = `${percentage}%`;
-	percentageColors(percentage);
 	answerInput.number.value = "";
-	fullEquation();
+
+	getRandomEquation();
 });
 
-quitBtn.addEventListener("click", e => {
-	e.preventDefault();
+quitBtn.addEventListener("click", () => {
 	quit.play();
-	toggleClasses();
+	toggleHiddenDisplays();
 	removeAllChildNodes();
-	resetNumsBoxes();
+	resetNumbersBoxes();
 });

@@ -46,7 +46,7 @@ const randOperator = () => {
 	}
 };
 
-const fullEquation = () => {
+const getRandomEquation = () => {
 	const operator = randOperator();
 	let [firstNum, secondNum] = difficultySetting();
 

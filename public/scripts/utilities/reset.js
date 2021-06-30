@@ -1,4 +1,4 @@
-const resetNumsBoxes = () => {
+const resetNumbersBoxes = () => {
 	totalCount = 0;
 	rightCount = 0;
 	wrongCount = 0;

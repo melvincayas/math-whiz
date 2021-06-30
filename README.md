@@ -48,6 +48,7 @@ If I were to expand on Math Whizard, I'd create a user database and let users ke
 
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
+- [Howler.js](https://howlerjs.com/)
 
 ## Contact
 

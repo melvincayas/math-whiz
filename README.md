@@ -52,6 +52,10 @@ If I were to expand on Math Whizard, I'd create a user database and let users ke
 
 ## Contact
 
-Melvin Cayas - [cayasmj@gmail.com](mailto:cayasmj@gmail.com?subject=[GitHub])
+Melvin Cayas  
+[cayasmj@gmail.com](mailto:cayasmj@gmail.com?subject=[GitHub])  
+[melvincayas.com](https://melvincayas.com/)
 
-Project Link: [https://github.com/melvincayas/math-whizard](https://github.com/melvincayas/math-whizard)
+Project Link  
+[Live Version](https://mathwhizard.com/)  
+[GitHub](https://github.com/melvincayas/math-whizard)

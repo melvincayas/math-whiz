@@ -30,20 +30,6 @@ The user can pick which operators to use:
 
 The user can choose whether equations will include negative numbers.
 
-## Future of Math Whizard
-
-I started this project in March 2021 while taking a [full-stack web developer course](https://www.udemy.com/course/the-web-developer-bootcamp/) on Udemy. My goal was to see what I could do with JavaScript.
-
-I revisited this project in June 2021 and I -
-
-- Refactored the code
-- Added error handling for empty inputs
-- Modified the game layout
-- Included the use of negative numbers
-- Added sound, hover, and color effects for playfulness
-
-If I were to expand on Math Whizard, I'd create a user database and let users keep track of their scores and compare with friends.
-
 ## Installation
 
 If you'd like to play around with the code and build your own game, feel free to do so!
@@ -77,6 +63,20 @@ git push origin your-improvement
 ```
 
 5. Open a Pull Request
+
+## Future of Math Whizard
+
+I started this project in March 2021 while taking a [full-stack web developer course](https://www.udemy.com/course/the-web-developer-bootcamp/) on Udemy. My goal was to see what I could do with JavaScript.
+
+I revisited this project in June 2021 and I -
+
+- Refactored the code
+- Added error handling for empty inputs
+- Modified the game layout
+- Included the use of negative numbers
+- Added sound, hover, and color effects for playfulness
+
+If I were to expand on Math Whizard, I'd create a user database and let users keep track of their scores and compare with friends.
 
 ## Acknowledgements
 

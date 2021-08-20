@@ -61,25 +61,19 @@ I'm always open to improving my code and the best way to do that is by having ot
 2. Create your branch for improvement
 
 ```
-
 git checkout -b your-improvement
-
 ```
 
 3. Commit your changes
 
 ```
-
 git commit -m "Refactored the code"
-
 ```
 
 4. Push to your branch
 
 ```
-
 git push origin your-improvement
-
 ```
 
 5. Open a Pull Request

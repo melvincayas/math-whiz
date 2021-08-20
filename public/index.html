@@ -23,12 +23,20 @@
 	</head>
 
 	<body>
-		<h1 id="title">Math Whizard</h1>
-		<div id="main-container" class="all-containers">
-			<button id="sound-btn"><i class="fas fa-volume-up"></i></button>
+		<header>
+			<h1 id="title">Math Whizard</h1>
+		</header>
+
+		<main id="main-container" class="all-containers">
+			<aside>
+				<button id="sound-btn"><i class="fas fa-volume-up"></i></button>
+			</aside>
+
 			<form id="game-settings">
-				<div>
-					<h3>Select difficulty:</h3>
+				<section>
+					<header>
+						<h3>Select difficulty:</h3>
+					</header>
 					<input id="easy" type="radio" name="difficulty" value="easy" />
 					<label for="easy" class="selection">Easy</label>
 					<input
@@ -41,9 +49,11 @@
 					<label for="normal" class="selection">Normal</label>
 					<input id="hard" type="radio" name="difficulty" value="hard" />
 					<label for="hard" class="selection">Hard</label>
-				</div>
-				<div>
-					<h3>Select operators:</h3>
+				</section>
+				<section>
+					<header>
+						<h3>Select operators:</h3>
+					</header>
 					<input id="plus" type="checkbox" name="operator" value="+" checked />
 					<label for="plus" class="selection">Addition</label>
 					<input id="minus" type="checkbox" name="operator" value="-" />
@@ -52,9 +62,11 @@
 					<label for="multiply" class="selection">Multiplication</label>
 					<input id="divide" type="checkbox" name="operator" value="/" />
 					<label for="divide" class="selection">Division</label>
-				</div>
-				<div>
-					<h3>Select game style:</h3>
+				</section>
+				<section>
+					<header>
+						<h3>Select game style:</h3>
+					</header>
 					<input
 						id="unlimited"
 						type="radio"
@@ -65,9 +77,11 @@
 					<label for="unlimited" class="selection">Unlimited</label>
 					<input id="minute" type="radio" name="game" value="minute" />
 					<label for="minute" class="selection">60 Second Fury</label>
-				</div>
-				<div>
-					<h3>Use negative numbers:</h3>
+				</section>
+				<section>
+					<header>
+						<h3>Use negative numbers:</h3>
+					</header>
 					<input id="yes-negatives" type="radio" name="sign" value="true" />
 					<label for="yes-negatives" class="selection">Yes</label>
 					<input
@@ -78,7 +92,7 @@
 						checked
 					/>
 					<label for="no-negatives" class="selection">No</label>
-				</div>
+				</section>
 				<div>
 					<button class="all-btns event-btns">Start</button>
 				</div>
@@ -105,32 +119,40 @@
 					<button id="quit-btn" class="all-btns event-btns">Quit</button>
 				</div>
 			</div>
-		</div>
+		</main>
 
-		<h2 id="error-text" class="hidden"></h2>
+		<header>
+			<h2 id="error-text" class="hidden"></h2>
+		</header>
 
-		<div id="stats-container" class="hidden all-containers">
-			<h1 class="stats-text subtitle">Progress</h1>
+		<section id="stats-container" class="hidden all-containers">
+			<header>
+				<h1 class="stats-text subtitle">Progress</h1>
+			</header>
 			<h1 class="stats-text">
 				<span id="right-text">0</span> out of <span id="total-text">0</span>
 			</h1>
 			<h1 class="stats-text"><span id="percentage-text"></span></h1>
-		</div>
+		</section>
 
-		<div id="answer-container" class="hidden all-containers">
+		<section id="answer-container" class="hidden all-containers">
 			<div class="answer-list left-box">
-				<h1 class="subtitle">Right</h1>
+				<header>
+					<h1 class="subtitle">Right</h1>
+				</header>
 				<div class="overflow">
 					<ul id="right-list"></ul>
 				</div>
 			</div>
 			<div class="answer-list">
-				<h1 class="subtitle">Missed</h1>
+				<header>
+					<h1 class="subtitle">Missed</h1>
+				</header>
 				<div class="overflow">
 					<ul id="wrong-list"></ul>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js"

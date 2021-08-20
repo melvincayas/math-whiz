@@ -44,6 +44,46 @@ I revisited this project in June 2021 and I -
 
 If I were to expand on Math Whizard, I'd create a user database and let users keep track of their scores and compare with friends.
 
+## Installation
+
+If you'd like to play around with the code and build your own game, feel free to do so!
+
+```
+git clone https://github.com/melvincayas/math-whizard.git
+```
+
+## Contributing
+
+I'm always open to improving my code and the best way to do that is by having others critique it. If you see any bugs or opportunities to refactor, please let me know. It would be **highly appreciated**!
+
+1. Fork this repo
+
+2. Create your branch for improvement
+
+```
+
+git checkout -b your-improvement
+
+```
+
+3. Commit your changes
+
+```
+
+git commit -m "Refactored the code"
+
+```
+
+4. Push to your branch
+
+```
+
+git push origin your-improvement
+
+```
+
+5. Open a Pull Request
+
 ## Acknowledgements
 
 - [Font Awesome](https://fontawesome.com/)

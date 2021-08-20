@@ -1,4 +1,10 @@
+import { makeNumsDivisible } from "./helpers.js";
+
+const gameSettings = document.querySelector("#game-settings");
 const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+const num1 = document.querySelector("#num1");
+const num2 = document.querySelector("#num2");
+const sign = document.querySelector("#sign");
 
 const randNum = digits => {
 	const scale = Math.pow(10, digits - 1);
@@ -15,7 +21,7 @@ const randNum = digits => {
 	return randNum;
 };
 
-const difficultySetting = () => {
+export const difficultySetting = () => {
 	const difficulty = gameSettings.difficulty.value;
 
 	if (difficulty === "easy") return [randNum(1), randNum(1)]; // two single-digit numbers
@@ -24,7 +30,7 @@ const difficultySetting = () => {
 	return [randNum(2), randNum(2)]; // two two-digit numbers
 };
 
-const filterCheckBox = () => {
+export const filterCheckBox = () => {
 	const checkedOperators = [];
 
 	for (let checkBox of checkBoxes) {
@@ -46,7 +52,7 @@ const randOperator = () => {
 	}
 };
 
-const getRandomEquation = () => {
+export const getRandomEquation = () => {
 	const operator = randOperator();
 	let [firstNum, secondNum] = difficultySetting();
 

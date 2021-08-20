@@ -1,4 +1,16 @@
-const calculateCorrectAnswer = () => {
+import { correct, incorrect } from "./sounds.js";
+
+const rightList = document.querySelector("#right-list");
+const wrongList = document.querySelector("#wrong-list");
+const answerInput = document.querySelector("#answer-input");
+const num1 = document.querySelector("#num1");
+const num2 = document.querySelector("#num2");
+const sign = document.querySelector("#sign");
+const rightText = document.querySelector("#right-text");
+const totalText = document.querySelector("#total-text");
+const percentageText = document.querySelector("#percentage-text");
+
+export const calculateCorrectAnswer = () => {
 	let trueOperator = sign.innerText;
 	if (sign.innerText === "×") trueOperator = "*";
 	if (sign.innerText === "÷") trueOperator = "/";
@@ -24,7 +36,7 @@ const wrongAnswerActions = evaluatedEquation => {
 	totalText.innerText = totalCount;
 };
 
-const checkUserAnswer = correctAnswer => {
+export const checkUserAnswer = correctAnswer => {
 	const userInput = parseInt(answerInput.number.value);
 	const string = `Q${totalCount}. ${num1.innerText} ${sign.innerText} ${num2.innerText} = ${userInput}`;
 	const li = document.createElement("li");
@@ -38,7 +50,7 @@ const checkUserAnswer = correctAnswer => {
 	}
 };
 
-const handleUserProgress = () => {
+export const handleUserProgress = () => {
 	const percentage = Math.round((rightCount / totalCount) * 100);
 	percentageText.innerText = `${percentage}%`;
 

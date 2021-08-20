@@ -1,4 +1,15 @@
-const resetNumbersBoxes = () => {
+const rightList = document.querySelector("#right-list");
+const wrongList = document.querySelector("#wrong-list");
+const answerInput = document.querySelector("#answer-input");
+const rightText = document.querySelector("#right-text");
+const totalText = document.querySelector("#total-text");
+const questionNum = document.querySelector("#question-num");
+const percentageText = document.querySelector("#percentage-text");
+const errorText = document.querySelector("#error-text");
+const ansContainer = document.querySelector("#answer-container");
+const statsContainer = document.querySelector("#stats-container");
+
+export const resetNumbersBoxes = () => {
 	totalCount = 0;
 	rightCount = 0;
 	wrongCount = 0;
@@ -17,7 +28,7 @@ const resetNumbersBoxes = () => {
 	title.innerText = "Math Whizard";
 };
 
-const removeAllChildNodes = () => {
+export const removeAllChildNodes = () => {
 	while (rightList.firstChild) {
 		rightList.removeChild(rightList.firstChild);
 	}

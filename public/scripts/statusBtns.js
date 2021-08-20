@@ -1,3 +1,5 @@
+import { menu } from "./utilities/sounds.js";
+
 const historyBtn = document.querySelector("#history-btn");
 const statsBtn = document.querySelector("#stats-btn");
 const statsContainer = document.querySelector("#stats-container");

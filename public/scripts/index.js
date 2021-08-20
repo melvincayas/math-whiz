@@ -1,20 +1,18 @@
+import { start, quit } from "./utilities/sounds.js";
+import { validOperators, validAnswer } from "./utilities/errors.js";
+import { toggleHiddenDisplays, countDown } from "./utilities/helpers.js";
+import { resetNumbersBoxes, removeAllChildNodes } from "./utilities/reset.js";
+import { getRandomEquation } from "./utilities/getEquation.js";
+import {
+	checkUserAnswer,
+	handleUserProgress,
+	calculateCorrectAnswer,
+} from "./utilities/answerInput.js";
+
 const gameSettings = document.querySelector("#game-settings");
 const quitBtn = document.querySelector("#quit-btn");
-const gameContent = document.querySelector("#game-content");
-const rightList = document.querySelector("#right-list");
-const wrongList = document.querySelector("#wrong-list");
 const answerInput = document.querySelector("#answer-input");
-const num1 = document.querySelector("#num1");
-const num2 = document.querySelector("#num2");
-const sign = document.querySelector("#sign");
-const rightText = document.querySelector("#right-text");
-const totalText = document.querySelector("#total-text");
 const questionNum = document.querySelector("#question-num");
-const percentageText = document.querySelector("#percentage-text");
-const errorText = document.querySelector("#error-text");
-
-let totalCount = 0;
-let rightCount = 0;
 
 gameSettings.addEventListener("submit", e => {
 	e.preventDefault();

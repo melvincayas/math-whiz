@@ -1,14 +1,24 @@
-const title = document.querySelector("#title");
+import { difficultySetting } from "./getEquation.js";
+import { timer } from "./sounds.js";
 
-const toggleHiddenDisplays = () => {
+const title = document.querySelector("#title");
+const gameSettings = document.querySelector("#game-settings");
+const statsContainer = document.querySelector("#stats-container");
+const ansContainer = document.querySelector("#answer-container");
+const answerInput = document.querySelector("#answer-input");
+const gameContent = document.querySelector("#game-content");
+
+export const toggleHiddenDisplays = () => {
 	gameSettings.classList.toggle("hidden");
 	ansContainer.classList.toggle("hidden");
 	gameContent.classList.toggle("hidden");
 	statsContainer.classList.toggle("hidden");
 };
 
-const makeNumsDivisible = () => {
+export const makeNumsDivisible = () => {
+	let firstNum, secondNum;
 	let divisible = false;
+
 	while (!divisible) {
 		[firstNum, secondNum] = difficultySetting();
 		if (firstNum % secondNum === 0) divisible = true;
@@ -16,7 +26,7 @@ const makeNumsDivisible = () => {
 	return [firstNum, secondNum];
 };
 
-const countDown = () => {
+export const countDown = () => {
 	let timeLeft = 60;
 
 	let countdown = setInterval(() => {

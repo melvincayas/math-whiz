@@ -1,4 +1,10 @@
-const validOperators = () => {
+import { error } from "./sounds.js";
+import { filterCheckBox } from "./getEquation.js";
+
+const errorText = document.querySelector("#error-text");
+const answerInput = document.querySelector("#answer-input");
+
+export const validOperators = () => {
 	if (filterCheckBox().length === 0) {
 		error.play();
 		errorText.innerText = "Please select an operator.";
@@ -13,7 +19,7 @@ const validOperators = () => {
 	}
 };
 
-const validAnswer = () => {
+export const validAnswer = () => {
 	if (answerInput.number.value === "") {
 		error.play();
 		errorText.innerText = "Please enter a number.";
